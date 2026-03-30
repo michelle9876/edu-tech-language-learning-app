@@ -1,0 +1,14 @@
+project_id = "lingua-bridge"
+
+[functions.daily-content]
+verify_jwt = true
+
+[functions.delete-account]
+verify_jwt = true
+
+[functions.dispatch-notifications]
+verify_jwt = false
+
+[functions.import-curriculum]
+verify_jwt = false
+

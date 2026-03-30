@@ -1,0 +1,45 @@
+{
+  "name": "lingua-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start --clear",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "typecheck": "tsc --noEmit",
+    "supabase:start": "supabase start",
+    "supabase:db:push": "supabase db push",
+    "supabase:functions:serve": "supabase functions serve --env-file ./supabase/.env.local"
+  },
+  "dependencies": {
+    "@expo-google-fonts/manrope": "latest",
+    "@expo-google-fonts/noto-sans-kr": "latest",
+    "@react-native-async-storage/async-storage": "latest",
+    "@supabase/supabase-js": "latest",
+    "expo": "~55.0.0",
+    "expo-apple-authentication": "latest",
+    "expo-auth-session": "latest",
+    "expo-constants": "latest",
+    "expo-crypto": "latest",
+    "expo-device": "latest",
+    "expo-font": "latest",
+    "expo-linking": "latest",
+    "expo-notifications": "latest",
+    "expo-router": "latest",
+    "expo-splash-screen": "latest",
+    "expo-status-bar": "latest",
+    "expo-web-browser": "latest",
+    "react": "19.2.0",
+    "react-native": "0.83.0",
+    "react-native-safe-area-context": "latest",
+    "react-native-screens": "latest",
+    "react-native-url-polyfill": "latest",
+    "zod": "latest",
+    "zustand": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "typescript": "latest"
+  }
+}

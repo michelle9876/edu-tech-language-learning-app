@@ -1,0 +1,52 @@
+{
+  "track": {
+    "id": "track-en-beginner-ko",
+    "nativeLanguage": "ko",
+    "targetLanguage": "en",
+    "level": "beginner",
+    "title": "English Starter for Korean Learners",
+    "subtitle": "Daily English foundations you can use immediately",
+    "description": "A calm beginner path focused on introductions, routines, and practical expressions.",
+    "modules": [
+      {
+        "id": "module-en-beginner-hello",
+        "title": "Hello & First Conversations",
+        "description": "Start with greetings, names, and simple social exchanges.",
+        "orderIndex": 1,
+        "lessons": [
+          {
+            "id": "lesson-en-beginner-hello",
+            "title": "Say hello and introduce yourself",
+            "summary": "Learn short greetings, names, and where you are from.",
+            "estimatedMinutes": 12,
+            "difficulty": "beginner",
+            "practicePrompt": "Record a 15-second self-introduction in English.",
+            "objectives": [
+              { "id": "obj-1", "text": "Greet naturally in English." },
+              { "id": "obj-2", "text": "Say your name and country." }
+            ],
+            "cards": [
+              {
+                "id": "card-en-hello-1",
+                "type": "expression",
+                "front": "Nice to meet you.",
+                "back": "만나서 반가워요.",
+                "example": "Hi, I'm Mina. Nice to meet you.",
+                "tags": ["greeting", "social"]
+              },
+              {
+                "id": "card-en-hello-2",
+                "type": "word",
+                "front": "from",
+                "back": "~에서 온",
+                "example": "I'm from Seoul.",
+                "tags": ["grammar", "origin"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+

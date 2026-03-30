@@ -1,0 +1,15 @@
+node_modules
+.expo
+.eas
+dist
+coverage
+web-build
+.DS_Store
+.env
+.env.local
+supabase/.temp
+supabase/.branches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
