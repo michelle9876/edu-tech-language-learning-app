@@ -16,7 +16,7 @@ Lingua Bridge is a cross-platform English/Korean learning MVP built with Expo Re
 - `app/`: Expo Router screens
 - `src/`: UI, state, mock data, repositories, and shared contracts
 - `supabase/`: SQL migration, seed import example, and Edge Functions
-- `docs/`: architecture and content import notes
+- `docs/`: architecture, content import notes, and deployment checklist
 
 ## Local setup
 
@@ -26,7 +26,7 @@ Lingua Bridge is a cross-platform English/Korean learning MVP built with Expo Re
 4. Create `supabase/.env.local` with server-side secrets:
 
 ```bash
-cp .env.example supabase/.env.local
+cp supabase/.env.local.example supabase/.env.local
 ```
 
 5. Install app dependencies:
@@ -62,6 +62,11 @@ supabase functions deploy delete-account
 ```
 
 5. Create a scheduled job for `dispatch-notifications` in the Supabase dashboard.
+
+## Deployment notes
+
+- Review `docs/deployment-checklist.md` before the first internal or store build.
+- Use `supabase/.env.local.example` as the server-side secret template for local function development and deployment prep.
 
 ## OpenAI model usage
 
