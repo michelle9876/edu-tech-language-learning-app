@@ -42,6 +42,16 @@ npx expo install --fix
 npm run start
 ```
 
+Also update the build-specific values in `.env` before your first release build:
+
+- `APP_SLUG`
+- `APP_VERSION`
+- `IOS_BUNDLE_IDENTIFIER`
+- `IOS_BUILD_NUMBER`
+- `ANDROID_PACKAGE`
+- `ANDROID_VERSION_CODE`
+- `EAS_PROJECT_ID`
+
 ## Supabase setup
 
 1. Install the Supabase CLI.
@@ -67,6 +77,7 @@ supabase functions deploy delete-account
 
 - Review `docs/deployment-checklist.md` before the first internal or store build.
 - Use `supabase/.env.local.example` as the server-side secret template for local function development and deployment prep.
+- Release identifiers and build numbers now come from `.env` through `app.config.ts`.
 
 ## OpenAI model usage
 

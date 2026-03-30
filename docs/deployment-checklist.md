@@ -8,6 +8,7 @@ Use this checklist before the first internal build, TestFlight upload, or Play C
 - Run `npm install`.
 - Run `npx expo install --fix`.
 - Copy `.env.example` to `.env` and fill in the Expo public values.
+- Fill in the release identifiers: `APP_SLUG`, `APP_VERSION`, `IOS_BUNDLE_IDENTIFIER`, `IOS_BUILD_NUMBER`, `ANDROID_PACKAGE`, `ANDROID_VERSION_CODE`, and `EAS_PROJECT_ID`.
 - Confirm `EXPO_PUBLIC_APP_SCHEME` matches the redirect scheme you will register for OAuth.
 
 ## 2. Supabase project setup
@@ -58,7 +59,7 @@ supabase functions deploy delete-account
 
 ## 7. Build configuration
 
-- Set the final bundle IDs/package names in `app.config.ts`.
+- Set the final release identifiers in `.env`, which now drive `app.config.ts`.
 - Configure EAS project and environment variables.
 - Run at least one `eas build` for iOS and Android.
 - Confirm the app scheme, deep linking, and auth redirect flow still work in release builds.
