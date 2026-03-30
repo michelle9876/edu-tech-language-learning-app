@@ -16,7 +16,7 @@ Lingua Bridge is a cross-platform English/Korean learning MVP built with Expo Re
 - `app/`: Expo Router screens
 - `src/`: UI, state, mock data, repositories, and shared contracts
 - `supabase/`: SQL migration, seed import example, and Edge Functions
-- `docs/`: architecture, content import notes, deployment checklist, and release-value guide
+- `docs/`: architecture, content import notes, deployment checklist, release-value guide, and launch profile
 
 ## Local setup
 
@@ -77,6 +77,7 @@ supabase functions deploy delete-account
 
 - Review `docs/deployment-checklist.md` before the first internal or store build.
 - Review `docs/release-values.md` for recommended first-release identifiers and versioning.
+- Review `docs/launch-profile.md` for the recommended app/store naming set.
 - Use `.env.production.example` as the starting point for your first release configuration.
 - Use `supabase/.env.local.example` as the server-side secret template for local function development and deployment prep.
 - Release identifiers and build numbers now come from `.env` through `app.config.ts`.
