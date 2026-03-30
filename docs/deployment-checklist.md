@@ -8,6 +8,7 @@ Use this checklist before the first internal build, TestFlight upload, or Play C
 - Run `npm install`.
 - Run `npx expo install --fix`.
 - Copy `.env.example` to `.env` and fill in the Expo public values.
+- Use `docs/release-values.md` as the recommended source for your first production identifiers.
 - Fill in the release identifiers: `APP_SLUG`, `APP_VERSION`, `IOS_BUNDLE_IDENTIFIER`, `IOS_BUILD_NUMBER`, `ANDROID_PACKAGE`, `ANDROID_VERSION_CODE`, and `EAS_PROJECT_ID`.
 - Confirm `EXPO_PUBLIC_APP_SCHEME` matches the redirect scheme you will register for OAuth.
 
