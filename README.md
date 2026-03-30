@@ -1,6 +1,6 @@
-# Lingua Bridge
+# edu-tech-language-learning-app
 
-Cross-platform English/Korean learning MVP built with Expo React Native, Supabase, and OpenAI Responses API.
+Lingua Bridge is a cross-platform English/Korean learning MVP built with Expo React Native, Supabase, and OpenAI Responses API.
 
 ## Included in this scaffold
 
