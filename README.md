@@ -20,7 +20,7 @@ Saylo is a cross-platform English/Korean learning MVP built with Expo React Nati
 
 ## Local setup
 
-1. Install Node.js 22+ and Expo CLI tooling.
+1. Use Node.js 22 LTS and Expo CLI tooling.
 2. Copy `.env.example` to `.env` and provide Expo public values.
 3. Create the Supabase project, then copy the URL and anon key into `.env`.
 4. Create `supabase/.env.local` with server-side secrets:
@@ -41,6 +41,8 @@ npx expo install --fix
 ```bash
 npm run start
 ```
+
+If Expo hangs after `Starting project at ...` on macOS, install `watchman` and retry with Node 22 active.
 
 Also update the build-specific values in `.env` before your first release build:
 
