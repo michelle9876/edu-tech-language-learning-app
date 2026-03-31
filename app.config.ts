@@ -1,7 +1,42 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { ConfigContext, ExpoConfig } from "expo/config";
 
 const uuidPattern =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+const envPath = path.join(__dirname, ".env");
+
+if (fs.existsSync(envPath)) {
+  const envLines = fs.readFileSync(envPath, "utf8").split(/\r?\n/);
+
+  for (const line of envLines) {
+    const trimmedLine = line.trim();
+    if (!trimmedLine || trimmedLine.startsWith("#")) {
+      continue;
+    }
+
+    const separatorIndex = trimmedLine.indexOf("=");
+    if (separatorIndex === -1) {
+      continue;
+    }
+
+    const key = trimmedLine.slice(0, separatorIndex).trim();
+    if (!key || process.env[key] !== undefined) {
+      continue;
+    }
+
+    let value = trimmedLine.slice(separatorIndex + 1).trim();
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+
+    process.env[key] = value;
+  }
+}
 
 const appName = process.env.EXPO_PUBLIC_APP_NAME ?? "Saylo";
 const appScheme = process.env.EXPO_PUBLIC_APP_SCHEME ?? "saylo";
