@@ -1,5 +1,8 @@
 import type { ConfigContext, ExpoConfig } from "expo/config";
 
+const uuidPattern =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
 const appName = process.env.EXPO_PUBLIC_APP_NAME ?? "Saylo";
 const appScheme = process.env.EXPO_PUBLIC_APP_SCHEME ?? "saylo";
 const appSlug = process.env.APP_SLUG ?? "saylo";
@@ -9,7 +12,10 @@ const iosBuildNumber = process.env.IOS_BUILD_NUMBER ?? "1";
 const androidPackage = process.env.ANDROID_PACKAGE ?? "com.saylo.app";
 const parsedAndroidVersionCode = Number.parseInt(process.env.ANDROID_VERSION_CODE ?? "1", 10);
 const androidVersionCode = Number.isNaN(parsedAndroidVersionCode) ? 1 : parsedAndroidVersionCode;
-const easProjectId = process.env.EAS_PROJECT_ID ?? "replace-with-your-eas-project-id";
+const configuredEasProjectId = process.env.EAS_PROJECT_ID?.trim();
+const easProjectId = configuredEasProjectId && uuidPattern.test(configuredEasProjectId)
+  ? configuredEasProjectId
+  : undefined;
 
 export default ({ config }: ConfigContext): ExpoConfig =>
   ({
@@ -51,8 +57,12 @@ export default ({ config }: ConfigContext): ExpoConfig =>
       supabaseUrl: process.env.EXPO_PUBLIC_SUPABASE_URL,
       supabaseAnonKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY,
       allowDemoAuth: process.env.EXPO_PUBLIC_ALLOW_DEMO_AUTH === "true",
-      eas: {
-        projectId: easProjectId,
-      },
+      ...(easProjectId
+        ? {
+            eas: {
+              projectId: easProjectId,
+            },
+          }
+        : {}),
     },
   }) as ExpoConfig;

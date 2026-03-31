@@ -54,6 +54,8 @@ Also update the build-specific values in `.env` before your first release build:
 - `ANDROID_VERSION_CODE`
 - `EAS_PROJECT_ID`
 
+Leave `EAS_PROJECT_ID` blank until you run `npx --yes eas-cli project:init`. The UUID returned by EAS is the value you should copy into `.env` and your Expo dashboard environment variables.
+
 ## Supabase setup
 
 1. Install the Supabase CLI.

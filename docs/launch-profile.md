@@ -35,8 +35,10 @@ IOS_BUNDLE_IDENTIFIER=com.saylo.app
 IOS_BUILD_NUMBER=1
 ANDROID_PACKAGE=com.saylo.app
 ANDROID_VERSION_CODE=1
-EAS_PROJECT_ID=replace-with-your-eas-project-id
+EAS_PROJECT_ID=
 ```
+
+Create or link the EAS project first with `npx --yes eas-cli project:init`, then copy the generated UUID into `EAS_PROJECT_ID`.
 
 ## Good backup options
 
