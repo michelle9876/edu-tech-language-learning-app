@@ -1,12 +1,12 @@
 import type { ConfigContext, ExpoConfig } from "expo/config";
 
-const appName = process.env.EXPO_PUBLIC_APP_NAME ?? "Lingua Bridge";
-const appScheme = process.env.EXPO_PUBLIC_APP_SCHEME ?? "linguabridge";
-const appSlug = process.env.APP_SLUG ?? "lingua-bridge";
+const appName = process.env.EXPO_PUBLIC_APP_NAME ?? "Saylo";
+const appScheme = process.env.EXPO_PUBLIC_APP_SCHEME ?? "saylo";
+const appSlug = process.env.APP_SLUG ?? "saylo";
 const appVersion = process.env.APP_VERSION ?? "0.1.0";
-const iosBundleIdentifier = process.env.IOS_BUNDLE_IDENTIFIER ?? "com.dnotitia.linguabridge";
+const iosBundleIdentifier = process.env.IOS_BUNDLE_IDENTIFIER ?? "com.saylo.app";
 const iosBuildNumber = process.env.IOS_BUILD_NUMBER ?? "1";
-const androidPackage = process.env.ANDROID_PACKAGE ?? "com.dnotitia.linguabridge";
+const androidPackage = process.env.ANDROID_PACKAGE ?? "com.saylo.app";
 const parsedAndroidVersionCode = Number.parseInt(process.env.ANDROID_VERSION_CODE ?? "1", 10);
 const androidVersionCode = Number.isNaN(parsedAndroidVersionCode) ? 1 : parsedAndroidVersionCode;
 const easProjectId = process.env.EAS_PROJECT_ID ?? "replace-with-your-eas-project-id";

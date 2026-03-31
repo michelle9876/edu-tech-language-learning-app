@@ -31,8 +31,9 @@ supabase functions deploy delete-account
 ## 3. OAuth setup
 
 - Create Google OAuth credentials for Expo/native deep linking.
-- Add the app redirect URI using the custom scheme from `app.config.ts`.
-- Enable Apple Sign In for the iOS app identifier.
+- Add `https://<your-project-ref>.supabase.co/auth/v1/callback` as the Google OAuth redirect URI.
+- Add `saylo://**` to Supabase Auth redirect URLs.
+- Enable Apple Sign In for the iOS app identifier `com.saylo.app`.
 - Confirm both Google and Apple are enabled in Supabase Auth providers.
 - Test sign-in on a real iPhone and Android device.
 
@@ -63,7 +64,7 @@ supabase functions deploy delete-account
 - Set the final release identifiers in `.env`, which now drive `app.config.ts`.
 - Configure EAS project and environment variables.
 - Run at least one `eas build` for iOS and Android.
-- Confirm the app scheme, deep linking, and auth redirect flow still work in release builds.
+- Confirm the app scheme `saylo`, deep linking, and auth redirect flow still work in release builds.
 
 ## 8. Store readiness
 

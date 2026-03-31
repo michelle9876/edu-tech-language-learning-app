@@ -11,10 +11,9 @@ type ExtraConfig = {
 const extra = (Constants.expoConfig?.extra ?? {}) as ExtraConfig;
 
 export const env = {
-  appName: extra.appName ?? "Lingua Bridge",
-  appScheme: extra.appScheme ?? "linguabridge",
+  appName: extra.appName ?? "Saylo",
+  appScheme: extra.appScheme ?? "saylo",
   supabaseUrl: extra.supabaseUrl ?? "",
   supabaseAnonKey: extra.supabaseAnonKey ?? "",
   allowDemoAuth: extra.allowDemoAuth ?? false,
 };
-

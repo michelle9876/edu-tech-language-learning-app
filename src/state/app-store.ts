@@ -203,7 +203,7 @@ export const useAppStore = create<AppStore>()(
       resetLocalState: () => set({ ...resetState(), isHydrated: true }),
     }),
     {
-      name: "lingua-bridge-store",
+      name: "saylo-store",
       storage: createJSONStorage(() => AsyncStorage),
       partialize: (state) => ({
         session: state.session,
@@ -222,4 +222,3 @@ export const useAppStore = create<AppStore>()(
     },
   ),
 );
-

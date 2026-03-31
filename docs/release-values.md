@@ -4,26 +4,28 @@ These are the recommended first-release identifiers for this project.
 
 ## Recommended defaults
 
-- App name: `Lingua Bridge`
-- Slug: `lingua-bridge`
-- URL scheme: `linguabridge`
-- iOS bundle identifier: `com.dnotitia.linguabridge`
-- Android package: `com.dnotitia.linguabridge`
+- App name: `Saylo`
+- Store title: `Saylo: English & Korean`
+- Slug: `saylo`
+- URL scheme: `saylo`
+- iOS bundle identifier: `com.saylo.app`
+- Android package: `com.saylo.app`
 - Initial marketing version: `1.0.0`
 - Initial iOS build number: `1`
 - Initial Android version code: `1`
 
 ## Why these values
 
-- `com.dnotitia.linguabridge` matches the existing project naming already used in the scaffold.
-- `linguabridge` is short, readable, and works well for OAuth redirect schemes.
+- `Saylo` is short, brandable, and easy to pronounce in both English and Korean contexts.
+- `saylo` is short, readable, and works well for OAuth redirect schemes like `saylo://**`.
+- `com.saylo.app` keeps the release identifier neutral and brand-owned without legacy namespace baggage.
 - Starting at `1.0.0` is cleaner if this repo is moving from prototype to first real distribution.
 
 ## Values you can usually keep
 
-- `APP_SLUG=lingua-bridge`
-- `EXPO_PUBLIC_APP_NAME=Lingua Bridge`
-- `EXPO_PUBLIC_APP_SCHEME=linguabridge`
+- `APP_SLUG=saylo`
+- `EXPO_PUBLIC_APP_NAME=Saylo`
+- `EXPO_PUBLIC_APP_SCHEME=saylo`
 
 ## Values you may want to change before store submission
 
@@ -37,17 +39,17 @@ These are the recommended first-release identifiers for this project.
 ## Suggested first-release .env values
 
 ```env
-EXPO_PUBLIC_APP_NAME=Lingua Bridge
-EXPO_PUBLIC_APP_SCHEME=linguabridge
+EXPO_PUBLIC_APP_NAME=Saylo
+EXPO_PUBLIC_APP_SCHEME=saylo
 EXPO_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 EXPO_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
 EXPO_PUBLIC_ALLOW_DEMO_AUTH=false
 
-APP_SLUG=lingua-bridge
+APP_SLUG=saylo
 APP_VERSION=1.0.0
-IOS_BUNDLE_IDENTIFIER=com.dnotitia.linguabridge
+IOS_BUNDLE_IDENTIFIER=com.saylo.app
 IOS_BUILD_NUMBER=1
-ANDROID_PACKAGE=com.dnotitia.linguabridge
+ANDROID_PACKAGE=com.saylo.app
 ANDROID_VERSION_CODE=1
 EAS_PROJECT_ID=replace-with-your-eas-project-id
 ```

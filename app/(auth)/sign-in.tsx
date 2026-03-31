@@ -30,7 +30,7 @@ export default function SignInScreen() {
 
   return (
     <Screen>
-      <Text style={styles.eyebrow}>Lingua Bridge</Text>
+      <Text style={styles.eyebrow}>Saylo</Text>
       <Text style={styles.title}>Learn English and Korean in one focused daily loop.</Text>
       <Text style={styles.body}>
         Build your curriculum, save useful words and expressions, then keep them alive with games
@@ -139,4 +139,3 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 });
-

@@ -90,7 +90,7 @@ const mapProgress = (progress: DbLessonProgress): LessonProgress => ({
 
 export const createDemoSession = (): AppSession => ({
   userId: "demo-user",
-  email: "demo@linguabridge.local",
+  email: "demo@saylo.local",
   provider: "demo",
   isDemo: true,
 });

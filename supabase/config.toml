@@ -1,4 +1,4 @@
-project_id = "lingua-bridge"
+project_id = "saylo"
 
 [functions.daily-content]
 verify_jwt = true
@@ -11,4 +11,3 @@ verify_jwt = false
 
 [functions.import-curriculum]
 verify_jwt = false
-
